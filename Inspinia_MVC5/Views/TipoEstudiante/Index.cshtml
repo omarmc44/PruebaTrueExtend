@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Colegio.Models.TipoEstudianteModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Index</h2>
+        <ol class="breadcrumb">
+            <li class="active">
+                <strong>TipoEstudianteModel</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>List of TipoEstudianteModel</h5>
+					<div class="ibox-tools">
+						@Html.ActionLink("CREAR", "Create", null, new { @class = "btn btn-primary btn-xs"})
+					</div>
+                </div>
+                <div class="ibox-content">
+
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoEstudiante)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoEstudiante)
+        </td>
+        <td>
+            @Html.ActionLink("EDITAR", "Edit", new { id=item.TipoEstudianteId }, new { @class = "btn btn-success btn-sm" })
+            @Html.ActionLink("BORRAR", "Delete", new { id=item.TipoEstudianteId }, new { @class = "btn btn-danger btn-sm"})
+        </td>
+    </tr>
+}
+
+</table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+
+
