@@ -1,11 +1,11 @@
 ﻿<nav class="navbar-default navbar-static-side" role="navigation">
     <div class="sidebar-collapse">
         <ul class="nav" id="side-menu">
-            <li class="@Html.IsSelected(controller: "Alumno")">
-                <a href="@Url.Action("Index", "Alumno")"><i class="fa fa-group"></i> <span class="nav-label" data-i18n="nav.metrics">ALUMNO</span> </a>
-            </li>
             <li class="@Html.IsSelected(controller: "TipoEstudiante")">
                 <a href="@Url.Action("Index", "TipoEstudiante")"><i class="fa fa-flask"></i> <span class="nav-label" data-i18n="nav.widgets">TIPO ESTUDIANTE</span> </a>
+            </li>
+            <li class="@Html.IsSelected(controller: "Alumno")">
+                <a href="@Url.Action("Index", "Alumno")"><i class="fa fa-group"></i> <span class="nav-label" data-i18n="nav.metrics">ALUMNO</span> </a>
             </li>
         </ul>
     </div>
